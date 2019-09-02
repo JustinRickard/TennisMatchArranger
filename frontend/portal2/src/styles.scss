@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+}
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+}
+
+$color-purple: rgb(84,0,139);
+$color-green: rgb(0,102,51);
+
+$text-color-lightest-purple: rgb(234, 217, 245);
+$text-color-lightest-green: rgb(220, 245, 233);;
