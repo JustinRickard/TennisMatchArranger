@@ -35,13 +35,24 @@ nav {
             letter-spacing: 0.2em;
             font-weight: bold;
             font-size: 14px;
+            padding: 1.5em;
+            height: 100%;
+            &:hover {
+                background-color: lighten($color-primary, 3%);
+            }
         }
         li {
             list-style: none;
-            padding: 2em;
             cursor: pointer;
+            
+            ul.link-group {
+                height: 0em;
+                position: relative;
+                top: 1.5em;
+                display: none;                
+            }
             &:hover {
-                background-color: lighten($color-primary, 3%);
+                display: block;
             }
         }
     }

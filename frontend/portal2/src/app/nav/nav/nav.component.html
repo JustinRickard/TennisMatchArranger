@@ -4,16 +4,27 @@
     </div>
     <ul class="nav-links" [ngClass]="{'nav-active': navActive}">
         <li>
-            <a href="#">Home</a>
+            <a [routerLink]="['/home']">Home</a>
         </li>
         <li>
-            <a href="#">Dashboard</a>
+            <a [routerLink]="['/dashboard']">Dashboard</a>
         </li>
         <li>
-            <a href="#">Matches</a>
+            <a [routerLink]="['/matches']">Matches</a>
         </li>
         <li>
-            <a href="#">Admin</a>
+            <a>Admin</a>
+            <ul class="link-group">
+                <li>
+                    <a [routerLink]="['/admin/clubs']">Clubs</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/admin/users']">People</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/admin/roles']">Roles</a>
+                </li>
+            </ul>
         </li>
     </ul>
     <div class="burger" (click)="toggleMenu()">
