@@ -1,19 +1,22 @@
 <nav>
     <div class="logo">
-        <h4>Tennis Match Arranger</h4>
+        <h4>Tennis Arranger</h4>
     </div>
     <ul class="nav-links" [ngClass]="{'nav-active': navActive}">
         <li>
-            <a [routerLink]="['/home']" [routerLinkActive]="['active']" (click)="toggleMenu()">Home</a>
+            <a [routerLink]="['/home']" [routerLinkActive]="['active']" (click)="toggleMenu()"><fa-icon [icon]="faHome"></fa-icon> Home</a>
         </li>
         <li>
-            <a [routerLink]="['/dashboard']" [routerLinkActive]="['active']" (click)="toggleMenu()">Dashboard</a>
+            <a [routerLink]="['/dashboard']" [routerLinkActive]="['active']" (click)="toggleMenu()"><fa-icon [icon]="faChartPie"></fa-icon> Dashboard</a>
         </li>
         <li>
-            <a [routerLink]="['/matches']" [routerLinkActive]="['active']" (click)="toggleMenu()">Matches</a>
+            <a [routerLink]="['/matches']" [routerLinkActive]="['active']" (click)="toggleMenu()"><fa-icon [icon]="faTableTennis"></fa-icon> Matches</a>
         </li>
         <li>
-            <a [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: false}" (click)="toggleAdmin()">Admin</a>
+            <a [routerLink]="['/competitions']" [routerLinkActive]="['active']" (click)="toggleMenu()"><fa-icon [icon]="faTrophy"></fa-icon> Competitions</a>
+        </li>
+        <li>
+            <a [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: false}" (click)="toggleAdmin()"><fa-icon [icon]="faCogs"></fa-icon> Admin</a>
             <ul class="link-group admin" [ngClass]="{'expanded': adminOpen}">
                 <li>
                     <a [routerLink]="['/admin/clubs']" [routerLinkActive]="['active']" (click)="toggleMenu()">Clubs</a>
@@ -27,7 +30,7 @@
             </ul>
         </li>
         <li>
-            <a [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: false}" (click)="toggleAccount()" >Account</a>
+            <a [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: false}" (click)="toggleAccount()"><fa-icon [icon]="faUserCircle"></fa-icon></a>
             <ul class="link-group account" [ngClass]="{'expanded': accountOpen}">
                 <li>
                     <a [routerLink]="['/account']" [routerLinkActive]="['active']" (click)="toggleMenu()">Account</a>

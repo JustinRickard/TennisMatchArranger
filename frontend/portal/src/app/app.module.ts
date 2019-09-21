@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav/nav.component';
 import { appRoutes } from './routes';
@@ -32,7 +34,8 @@ import { RoleDetailsComponent } from './admin/roles/role-details/role-details.co
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

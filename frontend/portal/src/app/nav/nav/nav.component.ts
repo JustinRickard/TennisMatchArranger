@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faHome, faChartPie, faUsers, faUserCircle, faTableTennis, faTrophy, faCogs } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-nav',
@@ -6,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
+  faHome = faHome;
+  faChartPie = faChartPie;
+  faUsers = faUsers;
+  faUserCircle = faUserCircle;
+  faTableTennis = faTableTennis;
+  faTrophy = faTrophy;
+  faCogs = faCogs;
 
   navActive: boolean;
   adminOpen: boolean;
