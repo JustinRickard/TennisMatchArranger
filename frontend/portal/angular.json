@@ -3,9 +3,13 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "arranger": {
+    "portal2": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/arranger",
+            "outputPath": "dist/portal2",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -58,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "arranger:build"
+            "browserTarget": "portal2:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "arranger:build:production"
+              "browserTarget": "portal2:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "arranger:build"
+            "browserTarget": "portal2:build"
           }
         },
         "test": {
@@ -84,7 +88,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -106,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "arranger:serve"
+            "devServerTarget": "portal2:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "arranger:serve:production"
+              "devServerTarget": "portal2:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "arranger"
+  "defaultProject": "portal2"
 }
