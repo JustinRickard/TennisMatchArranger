@@ -4,25 +4,36 @@
     </div>
     <ul class="nav-links" [ngClass]="{'nav-active': navActive}">
         <li>
-            <a [routerLink]="['/home']">Home</a>
+            <a [routerLink]="['/home']" [routerLinkActive]="['active']" (click)="toggleMenu()">Home</a>
         </li>
         <li>
-            <a [routerLink]="['/dashboard']">Dashboard</a>
+            <a [routerLink]="['/dashboard']" [routerLinkActive]="['active']" (click)="toggleMenu()">Dashboard</a>
         </li>
         <li>
-            <a [routerLink]="['/matches']">Matches</a>
+            <a [routerLink]="['/matches']" [routerLinkActive]="['active']" (click)="toggleMenu()">Matches</a>
         </li>
         <li>
-            <a>Admin</a>
+            <a [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: false}">Admin</a>
             <ul class="link-group">
                 <li>
-                    <a [routerLink]="['/admin/clubs']">Clubs</a>
+                    <a [routerLink]="['/admin/clubs']" [routerLinkActive]="['active']">Clubs</a>
                 </li>
                 <li>
-                    <a [routerLink]="['/admin/users']">People</a>
+                    <a [routerLink]="['/admin/users']" [routerLinkActive]="['active']">People</a>
                 </li>
                 <li>
-                    <a [routerLink]="['/admin/roles']">Roles</a>
+                    <a [routerLink]="['/admin/roles']" [routerLinkActive]="['active']">Roles</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: false}">Account</a>
+            <ul class="link-group">
+                <li>
+                    <a [routerLink]="['/account']" [routerLinkActive]="['active']">Account</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/logout']" [routerLinkActive]="['active']">Log out</a>
                 </li>
             </ul>
         </li>
