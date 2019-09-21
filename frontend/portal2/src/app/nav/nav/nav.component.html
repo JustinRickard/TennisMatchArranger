@@ -13,27 +13,27 @@
             <a [routerLink]="['/matches']" [routerLinkActive]="['active']" (click)="toggleMenu()">Matches</a>
         </li>
         <li>
-            <a [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: false}">Admin</a>
-            <ul class="link-group">
+            <a [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: false}" (click)="toggleAdmin()">Admin</a>
+            <ul class="link-group admin" [ngClass]="{'expanded': adminOpen}">
                 <li>
-                    <a [routerLink]="['/admin/clubs']" [routerLinkActive]="['active']">Clubs</a>
+                    <a [routerLink]="['/admin/clubs']" [routerLinkActive]="['active']" (click)="toggleMenu()">Clubs</a>
                 </li>
                 <li>
-                    <a [routerLink]="['/admin/users']" [routerLinkActive]="['active']">People</a>
+                    <a [routerLink]="['/admin/users']" [routerLinkActive]="['active']" (click)="toggleMenu()">People</a>
                 </li>
                 <li>
-                    <a [routerLink]="['/admin/roles']" [routerLinkActive]="['active']">Roles</a>
+                    <a [routerLink]="['/admin/roles']" [routerLinkActive]="['active']" (click)="toggleMenu()">Roles</a>
                 </li>
             </ul>
         </li>
         <li>
-            <a [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: false}">Account</a>
-            <ul class="link-group">
+            <a [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: false}" (click)="toggleAccount()" >Account</a>
+            <ul class="link-group account" [ngClass]="{'expanded': accountOpen}">
                 <li>
-                    <a [routerLink]="['/account']" [routerLinkActive]="['active']">Account</a>
+                    <a [routerLink]="['/account']" [routerLinkActive]="['active']" (click)="toggleMenu()">Account</a>
                 </li>
                 <li>
-                    <a [routerLink]="['/logout']" [routerLinkActive]="['active']">Log out</a>
+                    <a [routerLink]="['/logout']" [routerLinkActive]="['active']" (click)="toggleMenu()">Log out</a>
                 </li>
             </ul>
         </li>
