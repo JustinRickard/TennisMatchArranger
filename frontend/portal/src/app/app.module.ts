@@ -18,6 +18,7 @@ import { UserDetailsComponent } from './admin/users/user-details/user-details.co
 import { RolesComponent } from './admin/roles/roles/roles.component';
 import { RoleDetailsComponent } from './admin/roles/role-details/role-details.component';
 import { BallComponent } from './shared/ball/ball.component';
+import { LoaderComponent } from './shared/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { BallComponent } from './shared/ball/ball.component';
     UserDetailsComponent,
     RolesComponent,
     RoleDetailsComponent,
-    BallComponent
+    BallComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,

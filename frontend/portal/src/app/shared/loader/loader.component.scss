@@ -1,0 +1,17 @@
+$large: 10rem;
+$medium: 6rem;
+$small: 3rem;
+$tiny: 2rem;
+
+.loader {
+    width: $large;
+    height: $large;
+    &.medium {
+        width: $medium;
+        height: $medium;
+    }
+    &.small {
+        width: $small;
+        height: $small;
+    }
+}

@@ -26,6 +26,13 @@ nav {
         text-transform: uppercase;
         letter-spacing: 0.25em;
         font-size: 20px;
+        display: flex;
+        align-items: center;
+        .ball-container {
+            width: 2rem;
+            height: 2rem;
+            margin-right: 1rem;
+        }
     }
     .nav-links {
         display: flex;
@@ -54,7 +61,7 @@ nav {
             
             ul.link-group {
                 max-height: 0;
-                transition: max-height 1s linear 0.1s;
+                transition: max-height 0.1s linear 0.1s;
                 overflow: hidden;
                 position: absolute;
                 top: calc(4.0em - $border-width);
@@ -62,7 +69,7 @@ nav {
                 background-color: lighten($color-primary, 15%);
                 &.expanded {
                     max-height: 100em;
-                    transition: max-height 3s linear 0.5s;
+                    //transition: max-height 0.1s linear 0.1s;
                 }
                 &.account {
                     right: 0;

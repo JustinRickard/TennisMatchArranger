@@ -1,25 +1,12 @@
-.loader {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  .text {
-    margin-top: 1rem;
-  }
-
-
   .tennis-ball {
-    //position: absolute;
+    position: relative;
     overflow: hidden;
-    height: 15em;
-    width: 15em;
-    top: 50%;
-    left: 50%;
+    height: 100%;
+    width: 100%;
     border-radius: 50%;
     background-color: #cc0;
     background: radial-gradient(ellipse at center, #cc0 0%, darken(#cc0, 15) 100%);;
     box-sizing: border-box;
-    transform: translate(-50%, -50%) rotate(30deg);
     box-shadow: 10px 10px 20px 10px rgba(#000, .2);
     
     &:before,
@@ -29,7 +16,7 @@
       display: block;
       height: 100%;
       width: 100%;
-      border: solid 1em #fff;
+      border: solid .01rem #fff;
       border-radius: 50%;
       box-sizing: border-box;
     }
@@ -44,7 +31,7 @@
 
     &.spin {
       animation-name: spin;
-      animation-duration: 7000ms;
+      animation-duration: 4000ms;
       animation-iteration-count: infinite;
       animation-timing-function: linear; 
 
@@ -58,4 +45,3 @@
     }
     }
   }
-}

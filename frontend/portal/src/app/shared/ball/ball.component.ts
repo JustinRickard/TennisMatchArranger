@@ -8,7 +8,6 @@ import { Component, OnInit, Input } from '@angular/core';
 export class BallComponent implements OnInit {
 
   @Input() spin: boolean;
-  @Input() text: string = "Loading...";
   constructor() { }
 
   ngOnInit() {
