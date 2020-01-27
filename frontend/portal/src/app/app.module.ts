@@ -19,6 +19,7 @@ import { RolesComponent } from './admin/roles/roles/roles.component';
 import { RoleDetailsComponent } from './admin/roles/role-details/role-details.component';
 import { BallComponent } from './shared/ball/ball.component';
 import { LoaderComponent } from './shared/loader/loader.component';
+import { LeagueTableComponent } from './dashboard/league-table/league-table.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { LoaderComponent } from './shared/loader/loader.component';
     RolesComponent,
     RoleDetailsComponent,
     BallComponent,
-    LoaderComponent
+    LoaderComponent,
+    LeagueTableComponent
   ],
   imports: [
     BrowserModule,

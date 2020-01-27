@@ -1,0 +1,28 @@
+<div class="table-container">
+    <h3 class="table-header" *ngIf="name">{{ name }}</h3>
+    <table class="table league-table">
+            <tr>
+                <th>P</th>
+                <th>Player</th>
+                <th>R</th>
+                <th>Played</th>
+                <th>Won</th>
+                <th>Lost</th>
+                <th>Sets Won</th>
+                <th>Game Net Ratio</th>
+                <th>Points</th>
+            </tr>
+
+            <tr *ngFor="let result of results">
+                <td>{{result.position}}</td>
+                <td>{{result.player}}</td>
+                <td>{{result.rating}}</td>
+                <td>{{result.played}}</td>
+                <td>{{result.won}}</td>
+                <td>{{result.lost}}</td>
+                <td>{{result.setsWon}}</td>
+                <td>{{result.gameNetRatio}}</td>
+                <td>{{result.points}}</td>
+            </tr>
+    </table>
+</div>

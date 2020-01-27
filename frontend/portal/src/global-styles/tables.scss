@@ -1,0 +1,21 @@
+table {
+    border-collapse: collapse;
+    th {
+        background-color:  $color-secondary;
+        color: $text-color-lightest-secondary;
+        padding: 0.75rem;
+    }
+    td {
+        padding: 0.5rem 0.75rem;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-color: $color-primary;
+    }
+}
+
+.table-container {
+    h3 {
+        text-align: left;
+        margin: 0.75rem 0;
+    }
+}

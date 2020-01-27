@@ -13,3 +13,9 @@ $color-secondary: rgb(0,102,51);
 
 $text-color-lightest-primary: rgb(240, 230, 247);
 $text-color-lightest-secondary: rgb(229, 245, 237);;
+
+.page-content {
+    margin: 2rem;
+}
+
+@import "./global-styles/tables.scss";
