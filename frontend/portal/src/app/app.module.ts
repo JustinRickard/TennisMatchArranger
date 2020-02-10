@@ -20,6 +20,7 @@ import { RoleDetailsComponent } from './admin/roles/role-details/role-details.co
 import { BallComponent } from './shared/ball/ball.component';
 import { LoaderComponent } from './shared/loader/loader.component';
 import { LeagueTableComponent } from './dashboard/league-table/league-table.component';
+import { ModalComponent } from './shared/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { LeagueTableComponent } from './dashboard/league-table/league-table.comp
     RoleDetailsComponent,
     BallComponent,
     LoaderComponent,
-    LeagueTableComponent
+    LeagueTableComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
