@@ -5,6 +5,19 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    .modal-dialog, .modal-dialog .modal-content {
+        border-radius: $modal-border-radius;
+    }
+    .modal-dialog .modal-header {
+        border-radius: $modal-border-radius $modal-border-radius 0 0;
+    }
+
     .overlay {
         position: fixed; /* Sit on top of the page content */
         display: none; /* Hidden by default */
@@ -22,17 +35,39 @@
         }
     }
 
-.modal-dialog {
-    position: fixed;
-    z-index: $z-index-modal-content;
-    width: 20rem; // TODO: make less static
-    height: 20rem;
-    background-color: yellow;
-    border-radius: 5px;
-
-    .modal-content {
-        
-        
+    .modal-header {
+        background-color: $color-primary;
+        color: $text-color-lightest-primary;
+        padding: 1rem;
+        font-size: 16px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
     }
-}
+
+    .modal-dialog {
+        position: fixed;
+        z-index: $z-index-modal-content;
+        width: 50rem;
+        max-width: 95%;
+        max-height: 95%;
+        overflow: auto;
+        background-color: $text-color-lightest-primary;
+        opacity: 0.9;
+        box-shadow: $modal-box-shadow;      
+
+        &.tiny {
+            width: 20rem;        
+        }
+        &.small {
+            width: 35rem;
+        }
+        &.large {
+            width: 75rem;
+        }
+
+        .modal-content {
+            
+            
+        }
+    }
 }
