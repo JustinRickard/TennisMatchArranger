@@ -5,8 +5,12 @@
             {{header}}
         </div>
         <div class="modal-content">   
+            <!--
             <p content-1 select="content-1">Content One</p>    
             <p content-2 select="content-2">Content Two</p>    
+            -->
+            <ng-content select="content-1"></ng-content>
+            <ng-content select="content-2"></ng-content>
         </div>
     </div>
 </div>

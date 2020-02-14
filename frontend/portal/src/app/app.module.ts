@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { ResultService } from './services/result.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
@@ -45,7 +45,10 @@ import { ModalComponent } from './shared/modal/modal.component';
     RouterModule.forRoot(appRoutes),
     FontAwesomeModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    ResultService
+  ],
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }

@@ -10,7 +10,7 @@ import { RolesComponent } from './admin/roles/roles/roles.component';
 import { RoleDetailsComponent } from './admin/roles/role-details/role-details.component';
 
 export const appRoutes:Routes = [
-    { path: 'home', component: HomeComponent},
+    { path: '', component: HomeComponent},
     { path: 'dashboard', component: DashboardComponent},
     { path: 'matches', component: MatchesComponent},
     // admin
@@ -20,5 +20,4 @@ export const appRoutes:Routes = [
     { path: 'admin/roles/:id', component: RoleDetailsComponent },
     { path: 'admin/clubs', component: ClubsComponent},
     { path: 'admin/clubs/:id', component: ClubDetailsComponent },
-    { path: '', redirectTo: 'clubs', pathMatch: 'full'} // redirect root to clubs temporarily for testing
 ];

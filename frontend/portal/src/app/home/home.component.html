@@ -1,6 +1,10 @@
 <loader message="Home page in progress" className="medium"></loader>
 
-<app-modal [show]="true" header="Testing...">
-    <ng-content select="[content-1]"></ng-content>
-    <ng-content select="[content-2]"></ng-content>
+<button (click)="toggleSinglesModal()">Add singles result</button>
+
+<app-modal [show]="true" header="Testing..." *ngIf="showAddSinglesModal === true">
+    <content-1>Test</content-1>
+    <content-2>
+        <button (click)="addSinglesResult()">Add</button>
+    </content-2>
 </app-modal>
