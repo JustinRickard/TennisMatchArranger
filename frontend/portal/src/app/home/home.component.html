@@ -1,8 +1,13 @@
 <loader message="Home page in progress" className="medium"></loader>
 
-<app-modal-builder header="Add Singles Result" triggerButtonText="Add singles result">
-        <mb-content-1>Test</mb-content-1>
-        <mb-content-2>
-            <button (click)="addSinglesResult()">Add</button>
-        </mb-content-2>
+<app-modal-builder 
+    header="Add Singles Result" 
+    triggerButtonText="Add singles result" 
+    (submitAction)="addSinglesResult($event)"
+>
+    <mb-content-1>
+        <div>Test</div>
+    </mb-content-1>
+    <mb-content-2>            
+    </mb-content-2>
 </app-modal-builder>

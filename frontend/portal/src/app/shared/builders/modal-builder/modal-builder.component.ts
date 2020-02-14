@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-modal-builder',
@@ -10,8 +10,9 @@ export class ModalBuilderComponent implements OnInit {
   @Input() header: string;
   @Input() triggerButtonText: string;
 
-  show:boolean;
-  
+  @Output() submitAction = new EventEmitter<string>();
+
+  show:boolean;  
 
   constructor() {
     this.show = false;
@@ -19,6 +20,10 @@ export class ModalBuilderComponent implements OnInit {
 
   toggleShow() {
     this.show = !this.show;
+  }
+
+  submit() {
+    this.submitAction.emit("Form Data...");
   }
 
   ngOnInit() {
