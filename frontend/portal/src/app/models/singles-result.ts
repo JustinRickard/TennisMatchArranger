@@ -1,23 +1,23 @@
 export class SinglesResult {
 
-    date:Date; // TODO Change to moment
+    date:any; // TODO Change to moment
     locationId: string;
     eventId: string;
 
     player1Id:string;
     player2Id:string;
 
-    player1Scores: int[];
-    player2Scores: int[];
+    player1Scores: number[];
+    player2Scores: number[];
 
     constructor(
-        date:Date,
+        date:any,
         locationId: string,
         eventId: string,
         player1Id: string,
         player2Id: string,
-        player1Scores: int[],
-        player2Scores: int[]) {
+        player1Scores: number[],
+        player2Scores: number[]) {
             this.date = date;
             this.locationId = locationId;
             this.eventId = eventId;

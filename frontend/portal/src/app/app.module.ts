@@ -21,6 +21,7 @@ import { BallComponent } from './shared/ball/ball.component';
 import { LoaderComponent } from './shared/loader/loader.component';
 import { LeagueTableComponent } from './dashboard/league-table/league-table.component';
 import { ModalComponent } from './shared/modal/modal.component';
+import { ModalBuilderComponent } from './shared/builders/modal-builder/modal-builder.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ModalComponent } from './shared/modal/modal.component';
     BallComponent,
     LoaderComponent,
     LeagueTableComponent,
-    ModalComponent
+    ModalComponent,
+    ModalBuilderComponent
   ],
   imports: [
     BrowserModule,

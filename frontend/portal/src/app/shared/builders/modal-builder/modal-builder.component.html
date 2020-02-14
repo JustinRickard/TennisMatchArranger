@@ -1,0 +1,12 @@
+<div class="modal-builder">
+    <button class="primary" (click)="toggleShow()">{{ triggerButtonText }}</button>
+
+    <app-modal [show]="show" header="{{header}}" *ngIf="show">
+            <content-1>
+                <ng-content select="mb-content-1"></ng-content>
+            </content-1>
+            <content-2>
+                    <ng-content select="mb-content-2"></ng-content>
+            </content-2>
+    </app-modal>
+</div>
