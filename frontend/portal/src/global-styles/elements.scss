@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+}
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+}
+* {
+font-family: 'Barlow', sans-serif;
+}
+
+button {
+    padding: 0.75rem 1rem;
+    margin: 0.75rem;
+    border: none;
+    font-size: 16px;
+    border-radius: 3px;    
+    color: $color-primary;
+    background-color: $text-color-lightest-primary;
+
+    &.primary {
+        background-color: $color-primary;
+        color: $text-color-lightest-primary;
+    }
+
+    &.secondary {
+        background-color: $color-secondary;
+    
+    }
+
+    &.cancel {
+        background-color: transparent;
+    }
+}
+
+.page-content {
+    margin: 2rem;
+}

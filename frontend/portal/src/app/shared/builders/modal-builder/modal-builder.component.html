@@ -3,12 +3,15 @@
 
     <app-modal [show]="show" header="{{header}}" *ngIf="show">
             <content-1>
-                <ng-content select="mb-content-1"></ng-content>
+                <div class="content">
+                    <ng-content select="content"></ng-content>
+                </div>
             </content-1>
             <content-2>
-                    <ng-content select="mb-content-2"></ng-content>
-                    <button (click)="toggleShow()">Cancel</button>
-                    <button (click)="submit()">Submit</button>
+                    <div class="buttons">
+                        <button (click)="toggleShow()" class="cancel">{{ closeButtonText }}</button>
+                        <button (click)="submit()" class="primary" *ngIf="submitAction.observers.length">{{ submitButtonText }}</button>
+                    </div>
             </content-2>
     </app-modal>
 </div>

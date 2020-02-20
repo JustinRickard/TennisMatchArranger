@@ -7,8 +7,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ModalBuilderComponent implements OnInit {
 
-  @Input() header: string;
+  @Input() header: string;  
   @Input() triggerButtonText: string;
+  @Input() closeButtonText: string = "Cancel";
+  @Input() submitButtonText: string = "Submit";
 
   @Output() submitAction = new EventEmitter<string>();
 
@@ -16,6 +18,7 @@ export class ModalBuilderComponent implements OnInit {
 
   constructor() {
     this.show = false;
+    console.log("submitAction", this.submitAction);
   }
 
   toggleShow() {

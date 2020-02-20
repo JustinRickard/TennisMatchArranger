@@ -3,11 +3,12 @@
 <app-modal-builder 
     header="Add Singles Result" 
     triggerButtonText="Add singles result" 
+    closeButtonText="Close"
+    submitButtonText="Add Results"
     (submitAction)="addSinglesResult($event)"
+    
 >
-    <mb-content-1>
+    <content>
         <div>Test</div>
-    </mb-content-1>
-    <mb-content-2>            
-    </mb-content-2>
+    </content>
 </app-modal-builder>

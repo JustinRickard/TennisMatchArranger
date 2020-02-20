@@ -1,4 +1,4 @@
-@import "../../../global-styles/variables.scss";
+@import "../../../global-styles/index.scss";
 
 .modal-container {
     display: flex;
@@ -51,7 +51,7 @@
         max-width: 95%;
         max-height: 95%;
         overflow: auto;
-        background-color: $text-color-lightest-primary;
+        background-color: white;// $text-color-lightest-primary;
         opacity: 0.9;
         box-shadow: $modal-box-shadow;      
 

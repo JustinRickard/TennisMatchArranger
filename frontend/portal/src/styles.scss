@@ -1,25 +1,2 @@
 /* You can add global styles to this file, and also import other style files */
-
-@import "./global-styles/variables.scss";
-
-body {
-    margin: 0;
-}
-@media screen and (max-width: 768px) {
-    body {
-        overflow-x: hidden;
-    }
-}
-* {
-font-family: 'Barlow', sans-serif;
-}
-
-
-
-.page-content {
-    margin: 2rem;
-}
-
-
-
-@import "./global-styles/tables.scss";
+@import "./global-styles/index.scss";
