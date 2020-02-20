@@ -8,9 +8,15 @@
                 </div>
             </content-1>
             <content-2>
-                    <div class="buttons">
-                        <button (click)="toggleShow()" class="cancel">{{ closeButtonText }}</button>
-                        <button (click)="submit()" class="primary" *ngIf="submitAction.observers.length">{{ submitButtonText }}</button>
+                    <div class="buttons">                            
+                        <button (click)="toggleShow()" class="cancel">
+                            {{ closeButtonText }}
+                            <fa-icon [icon]="faTimes"></fa-icon>
+                        </button>
+                        <button (click)="submit()" class="secondary" *ngIf="submitAction.observers.length">
+                            {{ submitButtonText }}
+                           <fa-icon [icon]="faCheck"></fa-icon>
+                        </button>
                     </div>
             </content-2>
     </app-modal>

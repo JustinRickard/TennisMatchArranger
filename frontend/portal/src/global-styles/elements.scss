@@ -26,11 +26,15 @@ button {
 
     &.secondary {
         background-color: $color-secondary;
-    
+        color: white;    
     }
 
     &.cancel {
         background-color: transparent;
+    }
+
+    .ng-fa-icon {
+        margin-left: 0.25rem;
     }
 }
 
