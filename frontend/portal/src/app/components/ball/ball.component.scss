@@ -8,6 +8,7 @@
     background: radial-gradient(ellipse at center, #cc0 0%, darken(#cc0, 15) 100%);;
     box-sizing: border-box;
     box-shadow: 10px 10px 20px 10px rgba(#000, .2);
+    transform: rotateY(0deg) rotate(45deg);
     
     &:before,
     &:after {

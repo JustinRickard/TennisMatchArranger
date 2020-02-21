@@ -17,11 +17,12 @@ import { UsersComponent } from './admin/users/users/users.component';
 import { UserDetailsComponent } from './admin/users/user-details/user-details.component';
 import { RolesComponent } from './admin/roles/roles/roles.component';
 import { RoleDetailsComponent } from './admin/roles/role-details/role-details.component';
-import { BallComponent } from './shared/ball/ball.component';
-import { LoaderComponent } from './shared/loader/loader.component';
+import { BallComponent } from './components/ball/ball.component';
+import { LoaderComponent } from './components/loader/loader.component';
 import { LeagueTableComponent } from './dashboard/league-table/league-table.component';
-import { ModalComponent } from './shared/modal/modal.component';
-import { ModalBuilderComponent } from './shared/builders/modal-builder/modal-builder.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { ModalBuilderComponent } from './components/builders/modal-builder/modal-builder.component';
+import { AddSinglesResultComponent } from './features/add-singles-result/add-singles-result.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ModalBuilderComponent } from './shared/builders/modal-builder/modal-bui
     LoaderComponent,
     LeagueTableComponent,
     ModalComponent,
-    ModalBuilderComponent
+    ModalBuilderComponent,
+    AddSinglesResultComponent
   ],
   imports: [
     BrowserModule,
