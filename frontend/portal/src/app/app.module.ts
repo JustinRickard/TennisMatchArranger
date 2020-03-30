@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ResultService } from './services/result.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ReactiveFormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav/nav.component';
@@ -22,7 +23,8 @@ import { LoaderComponent } from './components/loader/loader.component';
 import { LeagueTableComponent } from './dashboard/league-table/league-table.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { ModalBuilderComponent } from './components/builders/modal-builder/modal-builder.component';
-import { AddSinglesResultComponent } from './features/add-singles-result/add-singles-result.component';
+import { AddSinglesResultComponent } from './features/singles-result/add-singles-result/add-singles-result.component';
+import { SinglesResultFormComponent } from './features/singles-result/singles-result-form/singles-result-form.component';
 
 @NgModule({
   declarations: [
@@ -42,12 +44,14 @@ import { AddSinglesResultComponent } from './features/add-singles-result/add-sin
     LeagueTableComponent,
     ModalComponent,
     ModalBuilderComponent,
-    AddSinglesResultComponent
+    AddSinglesResultComponent,
+    SinglesResultFormComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule
   ],
   providers: [
     ResultService

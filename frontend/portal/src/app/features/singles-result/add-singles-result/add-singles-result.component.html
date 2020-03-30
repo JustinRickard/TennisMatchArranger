@@ -3,9 +3,10 @@
     triggerButtonText="Add singles result" 
     closeButtonText="Close"
     submitButtonText="Add Results"
+    (form)="form"
     (submitAction)="addSinglesResult($event)"
 >
     <content>
-        <div>Test</div>
+        <singles-result-form></singles-result-form>
     </content>
 </app-modal-builder>

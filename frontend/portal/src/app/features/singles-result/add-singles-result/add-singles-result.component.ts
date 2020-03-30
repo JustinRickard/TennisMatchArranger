@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ModalBuilderComponent } from 'src/app/components/builders/modal-builder/modal-builder.component';
 import { SinglesResult } from 'src/app/models/singles-result';
 import { ResultService } from 'src/app/services/result.service'
+import { Form } from '@angular/forms';
+import { SinglesResultFormComponent } from '../singles-result-form/singles-result-form.component';
 
 @Component({
   selector: 'add-singles-result',
@@ -10,8 +12,7 @@ import { ResultService } from 'src/app/services/result.service'
 })
 export class AddSinglesResultComponent implements OnInit {
   @ViewChild(ModalBuilderComponent, null) modalBuilder:ModalBuilderComponent;
-
-  showAddSinglesModal:boolean;
+  @ViewChild(SinglesResultFormComponent, null) form:SinglesResultFormComponent;
 
   constructor(private resultService:ResultService) { }
 
@@ -19,9 +20,7 @@ export class AddSinglesResultComponent implements OnInit {
   }
 
   addSinglesResult (event:any) {
-    console.log("adding result...", event);
-    const result = new SinglesResult("2020-02-01", "test-loc", "test-evt", "p1", "p2", [6,6], [4,1]);
-    this.resultService.addSinglesResult(result); // TODO: wait on result
+    this.resultService.addSinglesResult(this.form.resultsForm.value); // TODO: wait on result
     this.modalBuilder.toggleShow();
   }
 }

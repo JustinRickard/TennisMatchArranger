@@ -1,5 +1,8 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewChildren, QueryList, ViewChild, ContentChildren, ContentChild } from '@angular/core';
 import { faTimes, faCheck } from '@fortawesome/free-solid-svg-icons';
+import { FormGroup, NgForm } from '@angular/forms';
+import { ModalComponent } from '../../modal/modal.component';
+import { SinglesResultFormComponent } from 'src/app/features/singles-result/singles-result-form/singles-result-form.component';
 
 @Component({
   selector: 'app-modal-builder',
@@ -15,12 +18,17 @@ export class ModalBuilderComponent implements OnInit {
   @Input() submitButtonText: string = "Submit";
   @Input() submitButtonIcon: string = "check-circle"
 
-  @Output() submitAction = new EventEmitter<string>();
+  @ContentChild('singles-result-form', null) form: any;
+
+  @Output() submitAction = new EventEmitter<any>();
 
   faTimes = faTimes;
   faCheck = faCheck;
 
-  show:boolean;  
+  show:boolean;
+
+  @ViewChild(ModalComponent, null) modal: any;
+  
 
   constructor() {
     this.show = false;
@@ -30,11 +38,11 @@ export class ModalBuilderComponent implements OnInit {
     this.show = !this.show;
   }
 
-  submit() {
-    this.submitAction.emit("Form Data...");
-  }
-
   ngOnInit() {
   }
 
+
+  submit() {
+    this.submitAction.emit();
+  }
 }
