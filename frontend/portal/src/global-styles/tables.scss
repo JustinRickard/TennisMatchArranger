@@ -1,4 +1,4 @@
-table {
+table:not(.mat-calendar-table) {
     border-collapse: collapse;
     th {
         background-color:  $color-secondary;

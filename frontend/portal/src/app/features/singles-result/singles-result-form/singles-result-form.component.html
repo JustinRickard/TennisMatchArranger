@@ -1,12 +1,28 @@
 <form #form [formGroup]="resultsForm" autocomplete="off" novalidate (ngSubmit)="submitForm(resultsForm.value)">
-
     <div class="form-group">
-        <label for="date">Date</label>
-        <input formControlName="date" id="date" type="date" class="form-control" placeholder="Select a date.." />
+       <mat-form-field>
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Competition</mat-label>
+            <input matInput placeholder="Friendly, Men's competition, etc...">
+          </mat-form-field>
     </div>
 
+    <!-- Breaks styling: TODO find out how to make it not affect other styles.
     <div class="form-group">
-        <label for="competition">Competition</label>
-        <input formControlName="competition" id="competition" type="text" class="form-control" placeholder="Competition..." />
+        <mat-form-field>
+            <mat-label>Favorite food</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let player of players" [value]="player.key">
+                {{player.value}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
     </div>
+    -->    
 </form>

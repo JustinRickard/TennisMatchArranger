@@ -7,7 +7,7 @@
     </div>
     <ul class="nav-links" [ngClass]="{'nav-active': navActive}">
         <li>
-            <a [routerLink]="['/home']" [routerLinkActive]="['active']" (click)="toggleMenu()"><fa-icon [icon]="faHome"></fa-icon> Home</a>
+            <a [routerLink]="['/']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMenu()"><fa-icon [icon]="faHome"></fa-icon> Home</a>
         </li>
         <li>
             <a [routerLink]="['/dashboard']" [routerLinkActive]="['active']" (click)="toggleMenu()"><fa-icon [icon]="faChartPie"></fa-icon> Dashboard</a>

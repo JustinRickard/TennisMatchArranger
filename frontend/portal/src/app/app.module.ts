@@ -25,6 +25,14 @@ import { ModalComponent } from './components/modal/modal.component';
 import { ModalBuilderComponent } from './components/builders/modal-builder/modal-builder.component';
 import { AddSinglesResultComponent } from './features/singles-result/add-singles-result/add-singles-result.component';
 import { SinglesResultFormComponent } from './features/singles-result/singles-result-form/singles-result-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  MatInputModule,
+  MatFormFieldModule
+} from '@angular/material';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
 
 @NgModule({
   declarations: [
@@ -51,7 +59,13 @@ import { SinglesResultFormComponent } from './features/singles-result/singles-re
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     FontAwesomeModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSliderModule,
+    MatDatepickerModule,
+    MatMomentDateModule,
+    MatInputModule,
+    MatFormFieldModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     ResultService
