@@ -15,18 +15,36 @@
               </mat-option>            
               </mat-select>
           </mat-form-field>
+
+         <mat-form-field>
+            <mat-label>Best of sets</mat-label>
+            <input matInput type="number" min=1 max=5 formControlName="bestOfSets">
+        </mat-form-field>
     </div>
 
-    <!-- Breaks styling: TODO find out how to make it not affect other styles.
+ 
     <div class="form-group">
-        <mat-form-field>
-            <mat-label>Favorite food</mat-label>
-            <mat-select>
-              <mat-option *ngFor="let player of players" [value]="player.key">
-                {{player.value}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
+      <mat-form-field>
+        <mat-label>Player 1</mat-label>
+        <mat-select formControlName="player1">
+         <mat-option *ngFor="let player of players" [value]="player.key">
+            {{player.value}}
+          </mat-option>            
+          </mat-select>
+      </mat-form-field>
+
+      
+
     </div>
-    -->    
+
+    <div class="form-group">
+      <mat-form-field>
+        <mat-label>Player 2</mat-label>
+        <mat-select formControlName="player2">
+         <mat-option *ngFor="let player of players" [value]="player.key">
+            {{player.value}}
+          </mat-option>            
+          </mat-select>
+      </mat-form-field>
+    </div>
 </form>
