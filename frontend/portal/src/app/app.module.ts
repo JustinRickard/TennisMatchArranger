@@ -33,6 +33,7 @@ import {
 import { MatSliderModule } from '@angular/material/slider';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { MatMomentDateModule } from '@angular/material-moment-adapter';
     MatMomentDateModule,
     MatInputModule,
     MatFormFieldModule,
+    MatSelectModule,
     BrowserAnimationsModule,
   ],
   providers: [

@@ -14,6 +14,7 @@ export class SinglesResultFormComponent implements OnInit {
   @Output() submitAction = new EventEmitter<FormGroup>();
 
   players: ILookup[];
+  competitions: ILookup[];
 
   constructor() { }
 
@@ -21,11 +22,13 @@ export class SinglesResultFormComponent implements OnInit {
     this.players = [new Lookup("1","Justin Rickard"), new Lookup("2", "Phil Beiken")];
 
     let date = new FormControl(moment());
-    let competition = new FormControl("Friendly")
+    //let competition = new FormControl("Friendly")
+    this.competitions = [new Lookup("1","Friendly"), new Lookup("2","Men's 2nd League")];
+
 
     this.resultsForm = new FormGroup({
       date: date,
-      competition: competition
+      competition: new FormControl("1")
     });
   }
 
