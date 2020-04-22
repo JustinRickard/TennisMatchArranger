@@ -11,8 +11,8 @@ import { SinglesResultFormComponent } from '../singles-result-form/singles-resul
   styleUrls: ['./add-singles-result.component.scss']
 })
 export class AddSinglesResultComponent implements OnInit {
-  @ViewChild(ModalBuilderComponent, null) modalBuilder:ModalBuilderComponent;
-  @ViewChild(SinglesResultFormComponent, null) form:SinglesResultFormComponent;
+  @ViewChild(ModalBuilderComponent, { static: false}) modalBuilder:ModalBuilderComponent;
+  @ViewChild(SinglesResultFormComponent, { static: false}) form:SinglesResultFormComponent;
 
   constructor(private resultService:ResultService) { }
 

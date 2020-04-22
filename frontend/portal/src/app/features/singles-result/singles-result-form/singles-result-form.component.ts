@@ -2,6 +2,7 @@ import { Component, OnInit, Output, EventEmitter, forwardRef } from '@angular/co
 import { FormControl, FormGroup, FormArray, FormBuilder, ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import * as moment from 'moment';
 import { Lookup } from 'src/app/models/lookup';
+import { ILookup } from 'src/app/interfaces/ILookup';
 
 @Component({
   selector: 'singles-result-form',

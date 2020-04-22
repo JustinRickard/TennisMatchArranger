@@ -18,7 +18,7 @@ export class ModalBuilderComponent implements OnInit {
   @Input() submitButtonText: string = "Submit";
   @Input() submitButtonIcon: string = "check-circle"
 
-  @ContentChild('singles-result-form', null) form: any;
+  @ContentChild('singles-result-form', { static: false}) form: any;
 
   @Output() submitAction = new EventEmitter<any>();
 
@@ -27,7 +27,7 @@ export class ModalBuilderComponent implements OnInit {
 
   show:boolean;
 
-  @ViewChild(ModalComponent, null) modal: any;
+  @ViewChild(ModalComponent, { static: false}) modal: any;
   
 
   constructor() {

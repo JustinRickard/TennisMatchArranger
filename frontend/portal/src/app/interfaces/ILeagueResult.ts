@@ -1,4 +1,4 @@
-interface ILeagueResult {
+export interface ILeagueResult {
     position: number;
     player: string;
     rating: string;

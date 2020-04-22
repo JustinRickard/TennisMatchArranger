@@ -1,4 +1,4 @@
-interface ILookup {
+export interface ILookup {
     key: string;
     value: string;
 }

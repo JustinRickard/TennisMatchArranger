@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ILeagueResult } from 'src/app/interfaces/ILeagueResult';
 
 @Component({
   selector: 'league-table',

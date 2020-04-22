@@ -10,7 +10,7 @@ export class ModalComponent implements OnInit {
   @Input() header:string;
   @Input() show:boolean;
 
-  @ViewChild('form', null) form: any;
+  @ViewChild('form', { static: false}) form: any;
   
   constructor(){
   }
