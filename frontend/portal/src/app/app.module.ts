@@ -73,6 +73,7 @@ import { MatSelectModule } from '@angular/material/select';
     ResultService
   ],
   bootstrap: [AppComponent],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+  
 })
 export class AppModule { }

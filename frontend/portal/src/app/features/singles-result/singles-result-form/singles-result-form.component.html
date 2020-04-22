@@ -33,7 +33,15 @@
           </mat-select>
       </mat-form-field>
 
-      
+      <div formArrayName="player1Sets">
+        <div *ngFor="let p1Set of resultsForm.controls.player1Sets.value; let i = index" formGroupName="{{i}}">
+          <!-- <div formControlName="{{i}}"> -->
+          <mat-form-field>
+            <input matInput formControlName='games' type="number" min="0" />
+          </mat-form-field>
+          <!-- </div> -->
+        </div>
+    </div>
 
     </div>
 

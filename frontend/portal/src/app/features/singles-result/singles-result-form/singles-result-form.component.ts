@@ -1,12 +1,19 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { FormControl, FormGroup, FormArray, FormBuilder } from '@angular/forms';
+import { Component, OnInit, Output, EventEmitter, forwardRef } from '@angular/core';
+import { FormControl, FormGroup, FormArray, FormBuilder, ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import * as moment from 'moment';
 import { Lookup } from 'src/app/models/lookup';
 
 @Component({
   selector: 'singles-result-form',
   templateUrl: './singles-result-form.component.html',
-  styleUrls: ['./singles-result-form.component.scss']
+  styleUrls: ['./singles-result-form.component.scss'],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => SinglesResultFormComponent),
+      multi: true
+    }
+  ]
 })
 export class SinglesResultFormComponent implements OnInit {
 
@@ -31,10 +38,12 @@ export class SinglesResultFormComponent implements OnInit {
       competition: new FormControl(),
       bestOfSets: new FormControl(this.defaultBestOfSets),
       player1: new FormControl(),
-      player1Sets: this.fb.array([null, null, null]),
+      player1Sets: this.fb.array([this.newSet(), this.newSet(), this.newSet()]),
       player2: new FormControl(),
-      player2Sets: this.fb.array([null, null, null]),
+      player2Sets: this.fb.array([this.newSet(), this.newSet(), this.newSet()]),
     });
+
+    console.log("After init", this.resultsForm);
   }
 
   submitForm() {
@@ -42,6 +51,21 @@ export class SinglesResultFormComponent implements OnInit {
     this.submitAction.emit(this.resultsForm)
   }
 
+  addSet() {
+    const player1Sets = this.resultsForm.controls.player1Sets as FormArray;
+    const player2Sets = this.resultsForm.controls.player1Sets as FormArray;
+
+    player1Sets.push(this.fb.group(this.newSet()));
+    player2Sets.push(this.fb.group(this.newSet()));
+    //player1Sets.push(null);
+    //player2Sets.push(null);
+  }
+
+  newSet() {
+    return { games: null};
+  }
+
+  /*
   updateBestOfSets() {
     const player1Sets = this.resultsForm.get('player1Sets') as FormArray;
     const player2Sets = this.resultsForm.get('player2Sets') as FormArray;
@@ -55,5 +79,7 @@ export class SinglesResultFormComponent implements OnInit {
       player1Sets.push(null);
       player2Sets.push(null);
     }
+    
   }
+  */
 }
