@@ -1,0 +1,18 @@
+.result-line { 
+    display: flex;
+    .sets {
+        display: flex;
+        .set, .set .mat-form-field {
+            width: 5rem;            
+        }        
+    }
+}
+
+.mat-form-field-underline {
+    display: none !important;
+    margin-bottom: 10rem;
+}
+
+.mat-form-field-underline {
+    visibility: hidden;
+}

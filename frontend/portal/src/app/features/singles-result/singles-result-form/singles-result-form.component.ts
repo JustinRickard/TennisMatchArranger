@@ -39,12 +39,24 @@ export class SinglesResultFormComponent implements OnInit {
       competition: new FormControl(),
       bestOfSets: new FormControl(this.defaultBestOfSets),
       player1: new FormControl(),
-      player1Sets: this.fb.array([this.newSet(), this.newSet(), this.newSet()]),
+      //player1Sets: this.fb.array([this.newSet(), this.newSet(), this.newSet()]),
+      player1Sets: this.fb.array([]),
       player2: new FormControl(),
-      player2Sets: this.fb.array([this.newSet(), this.newSet(), this.newSet()]),
+      //player2Sets: this.fb.array([this.newSet(), this.newSet(), this.newSet()]),
+      player2Sets: this.fb.array([]),
     });
 
     console.log("After init", this.resultsForm);
+
+    this.addSet();
+  }
+
+  get player1Sets() {
+    return this.resultsForm.get('player1Sets');
+  }  
+
+  get player2Sets() {
+    return this.resultsForm.get('player1Sets');
   }
 
   submitForm() {
@@ -54,16 +66,19 @@ export class SinglesResultFormComponent implements OnInit {
 
   addSet() {
     const player1Sets = this.resultsForm.controls.player1Sets as FormArray;
-    const player2Sets = this.resultsForm.controls.player1Sets as FormArray;
+    const player2Sets = this.resultsForm.controls.player2Sets as FormArray;
 
-    player1Sets.push(this.fb.group(this.newSet()));
-    player2Sets.push(this.fb.group(this.newSet()));
+    player1Sets.push(this.newSet());
+    player2Sets.push(this.newSet());
+    //player1Sets.push(this.fb.group(this.newSet()));
+    //player2Sets.push(this.fb.group(this.newSet()));
     //player1Sets.push(null);
     //player2Sets.push(null);
   }
 
-  newSet() {
-    return { games: null};
+  newSet() : FormGroup {
+    return this.fb.group({ games: 3});
+    //return { games: 3};
   }
 
   /*
