@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, forwardRef } from '@angular/core';
 import { FormControl, FormGroup, FormArray, FormBuilder, ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import * as moment from 'moment';
 import { Lookup } from 'src/app/models/lookup';
 import { ILookup } from 'src/app/interfaces/ILookup';
@@ -23,6 +24,8 @@ export class SinglesResultFormComponent implements OnInit {
 
   defaultBestOfSets:number = 3;
 
+  faPlus = faPlus;
+
   // Lookup data
   players: ILookup[];
   competitions: ILookup[];
@@ -39,14 +42,10 @@ export class SinglesResultFormComponent implements OnInit {
       competition: new FormControl(),
       bestOfSets: new FormControl(this.defaultBestOfSets),
       player1: new FormControl(),
-      //player1Sets: this.fb.array([this.newSet(), this.newSet(), this.newSet()]),
       player1Sets: this.fb.array([]),
       player2: new FormControl(),
-      //player2Sets: this.fb.array([this.newSet(), this.newSet(), this.newSet()]),
       player2Sets: this.fb.array([]),
     });
-
-    console.log("After init", this.resultsForm);
 
     this.addSet();
   }
@@ -70,15 +69,10 @@ export class SinglesResultFormComponent implements OnInit {
 
     player1Sets.push(this.newSet());
     player2Sets.push(this.newSet());
-    //player1Sets.push(this.fb.group(this.newSet()));
-    //player2Sets.push(this.fb.group(this.newSet()));
-    //player1Sets.push(null);
-    //player2Sets.push(null);
   }
 
   newSet() : FormGroup {
-    return this.fb.group({ games: 3});
-    //return { games: 3};
+    return this.fb.group({ games: null});
   }
 
   /*

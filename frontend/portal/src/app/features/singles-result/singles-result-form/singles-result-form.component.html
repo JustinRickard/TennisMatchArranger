@@ -35,12 +35,14 @@
 
       <div formArrayName="player1Sets" class="sets">
         <div *ngFor="let p1Set of resultsForm.get('player1Sets').controls; let i = index" formGroupName="{{i}}" class="set">
-          <!-- <div formControlName="{{i}}"> -->
           <mat-form-field>
             <input matInput formControlName='games' type="number" min="0" />
           </mat-form-field>
-          <!-- </div> -->
         </div>
+
+        <button (click)="addSet()" class="primary icon-only add-set" *ngIf="resultsForm.get('bestOfSets').value && resultsForm.get('player1Sets').controls.length < resultsForm.get('bestOfSets').value">          
+         <fa-icon [icon]="faPlus"></fa-icon>
+      </button>
     </div>
 
     </div>
@@ -56,13 +58,11 @@
       </mat-form-field>
 
       <div formArrayName="player2Sets" class="sets">
-        <div *ngFor="let p1Set of resultsForm.get('player2Sets').controls; let i = index" formGroupName="{{i}}" class="set">
-          <!-- <div formControlName="{{i}}"> -->
+        <div *ngFor="let p2Set of resultsForm.get('player2Sets').controls; let i = index" formGroupName="{{i}}" class="set">
           <mat-form-field>
             <input matInput formControlName='games' type="number" min="0" />
           </mat-form-field>
-          <!-- </div> -->
-        </div>
+         </div>
     </div>
     </div>
 </form>

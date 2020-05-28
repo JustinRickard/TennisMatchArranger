@@ -34,7 +34,7 @@ button {
         background-color: transparent;
     }
 
-    .ng-fa-icon {
+    .ng-fa-icon:not-(.icon-only) {
         margin-left: 0.25rem;
     }
 }
