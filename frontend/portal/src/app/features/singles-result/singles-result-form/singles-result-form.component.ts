@@ -50,16 +50,15 @@ export class SinglesResultFormComponent implements OnInit {
     this.addSet();
   }
 
-  get player1Sets() {
-    return this.resultsForm.get('player1Sets');
+  get player1Sets(): FormArray {
+    return this.resultsForm.get('player1Sets') as FormArray;
   }  
 
-  get player2Sets() {
-    return this.resultsForm.get('player1Sets');
+  get player2Sets(): FormArray {
+    return this.resultsForm.get('player1Sets') as FormArray;
   }
 
   submitForm() {
-    console.log("Form: ", this.resultsForm);
     this.submitAction.emit(this.resultsForm)
   }
 
