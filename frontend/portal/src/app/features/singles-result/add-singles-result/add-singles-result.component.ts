@@ -19,6 +19,11 @@ export class AddSinglesResultComponent implements OnInit {
   ngOnInit() {
   }
 
+  cancel() {
+    this.modalBuilder.toggleShow();
+    this.form.clear();    
+  }
+
   addSinglesResult (event:any) {
     this.resultService.addSinglesResult(this.form.resultsForm.value); // TODO: wait on result
     this.modalBuilder.toggleShow();

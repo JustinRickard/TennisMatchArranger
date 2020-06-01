@@ -21,6 +21,7 @@ export class ModalBuilderComponent implements OnInit {
   @ContentChild('singles-result-form', { static: false}) form: any;
 
   @Output() submitAction = new EventEmitter<any>();
+  @Output() cancelAction = new EventEmitter<any>();
 
   faTimes = faTimes;
   faCheck = faCheck;
@@ -41,6 +42,9 @@ export class ModalBuilderComponent implements OnInit {
   ngOnInit() {
   }
 
+  cancel() {
+    this.cancelAction.emit();
+  }
 
   submit() {
     this.submitAction.emit();

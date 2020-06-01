@@ -1,10 +1,10 @@
 <app-modal-builder 
     header="Add Singles Result" 
     triggerButtonText="Add singles result" 
-    closeButtonText="Close"
     submitButtonText="Add Results"
     (form)="form"
     (submitAction)="addSinglesResult($event)"
+    (cancelAction)="cancel()"
 >
     <content>
         <singles-result-form></singles-result-form>

@@ -20,7 +20,8 @@ import { ILookup } from 'src/app/interfaces/ILookup';
 export class SinglesResultFormComponent implements OnInit {
 
   resultsForm: FormGroup;
-  @Output() submitAction = new EventEmitter<FormGroup>();
+  @Output() submitAction = new EventEmitter();
+  @Output() cancelAction = new EventEmitter<FormGroup>();
 
   defaultBestOfSets:number = 3;
 
@@ -37,6 +38,20 @@ export class SinglesResultFormComponent implements OnInit {
     this.players = [new Lookup("1","Justin Rickard"), new Lookup("2", "Phil Beiken")];    
     this.competitions = [new Lookup("1","Friendly"), new Lookup("2","Men's 2nd League")];
 
+    this.clear();
+
+    this.addSet();
+  }  
+
+  get player1Sets(): FormArray {
+    return this.resultsForm.get('player1Sets') as FormArray;
+  }  
+
+  get player2Sets(): FormArray {
+    return this.resultsForm.get('player1Sets') as FormArray;
+  }
+
+  clear() {
     this.resultsForm = new FormGroup({
       date: new FormControl(moment()),
       competition: new FormControl(),
@@ -46,16 +61,10 @@ export class SinglesResultFormComponent implements OnInit {
       player2: new FormControl(),
       player2Sets: this.fb.array([]),
     });
-
-    this.addSet();
   }
 
-  get player1Sets(): FormArray {
-    return this.resultsForm.get('player1Sets') as FormArray;
-  }  
-
-  get player2Sets(): FormArray {
-    return this.resultsForm.get('player1Sets') as FormArray;
+  cancelForm() {
+    this.cancelAction.emit()
   }
 
   submitForm() {
