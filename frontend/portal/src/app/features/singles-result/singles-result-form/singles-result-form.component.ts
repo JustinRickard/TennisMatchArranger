@@ -2,8 +2,8 @@ import { Component, OnInit, Output, EventEmitter, forwardRef } from '@angular/co
 import { FormControl, FormGroup, FormArray, FormBuilder, ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import * as moment from 'moment';
-import { Lookup } from 'src/app/models/lookup';
 import { ILookup } from 'src/app/interfaces/ILookup';
+import { PlayerService, CompetitionService } from 'src/app/services';
 
 @Component({
   selector: 'singles-result-form',
@@ -31,12 +31,12 @@ export class SinglesResultFormComponent implements OnInit {
   players: ILookup[];
   competitions: ILookup[];
 
-  constructor(private fb: FormBuilder) {    
+  constructor(private fb: FormBuilder, private playerService: PlayerService, private competitionService: CompetitionService) {    
    }
 
   ngOnInit() {
-    this.players = [new Lookup("1","Justin Rickard"), new Lookup("2", "Phil Beiken")];    
-    this.competitions = [new Lookup("1","Friendly"), new Lookup("2","Men's 2nd League")];
+    this.players = this.playerService.getPlayersLookup();
+    this.competitions = this.competitionService.getCompetitionInstancesLookup();
 
     this.clear();
 

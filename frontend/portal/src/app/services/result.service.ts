@@ -14,5 +14,5 @@ export class ResultService {
 
     console.log("Saving result", result);
     return new ServiceResult(true, "Added");
-  } 
+  }  
 }
