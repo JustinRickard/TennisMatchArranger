@@ -19,6 +19,7 @@ import { UserDetailsComponent } from './admin/users/user-details/user-details.co
 import { RolesComponent } from './admin/roles/roles/roles.component';
 import { RoleDetailsComponent } from './admin/roles/role-details/role-details.component';
 import { BallComponent } from './components/ball/ball.component';
+import { EnvBannerComponent } from './components/env-banner/env-banner.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { LeagueTableComponent } from './dashboard/league-table/league-table.component';
 import { ModalComponent } from './components/modal/modal.component';
@@ -49,6 +50,7 @@ import { MatSelectModule } from '@angular/material/select';
     RolesComponent,
     RoleDetailsComponent,
     BallComponent,
+    EnvBannerComponent,
     LoaderComponent,
     LeagueTableComponent,
     ModalComponent,
