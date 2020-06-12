@@ -27,10 +27,8 @@ import { ModalBuilderComponent } from './components/builders/modal-builder/modal
 import { AddSinglesResultComponent } from './features/singles-result/add-singles-result/add-singles-result.component';
 import { SinglesResultFormComponent } from './features/singles-result/singles-result-form/singles-result-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {
-  MatInputModule,
-  MatFormFieldModule
-} from '@angular/material';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
