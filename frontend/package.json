@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "buildDev": "ng build --configuration=dev",
+    "buildProd": "ng build --configuration=production",
     "compiled": "lite-server --baseDir=dist/arranger",
     "test": "ng test",
     "lint": "ng lint",
