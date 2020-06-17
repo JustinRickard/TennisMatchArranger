@@ -1,0 +1,13 @@
+@import "../../../global-styles/index";
+
+.env-banner {
+    position: fixed;    
+    bottom: 1rem;
+    left: -3rem;
+    transform: rotate(45deg);
+    background-color: $color-tertiary;
+    padding: 1rem;
+    width: 10rem;
+    opacity: 0.75;
+    color: $color-secondary;
+}

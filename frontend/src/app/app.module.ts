@@ -19,6 +19,7 @@ import { UserDetailsComponent } from './admin/users/user-details/user-details.co
 import { RolesComponent } from './admin/roles/roles/roles.component';
 import { RoleDetailsComponent } from './admin/roles/role-details/role-details.component';
 import { BallComponent } from './components/ball/ball.component';
+import { EnvBannerComponent } from './components/env-banner/env-banner.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { LeagueTableComponent } from './dashboard/league-table/league-table.component';
 import { ModalComponent } from './components/modal/modal.component';
@@ -26,10 +27,8 @@ import { ModalBuilderComponent } from './components/builders/modal-builder/modal
 import { AddSinglesResultComponent } from './features/singles-result/add-singles-result/add-singles-result.component';
 import { SinglesResultFormComponent } from './features/singles-result/singles-result-form/singles-result-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {
-  MatInputModule,
-  MatFormFieldModule
-} from '@angular/material';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
@@ -49,6 +48,7 @@ import { MatSelectModule } from '@angular/material/select';
     RolesComponent,
     RoleDetailsComponent,
     BallComponent,
+    EnvBannerComponent,
     LoaderComponent,
     LeagueTableComponent,
     ModalComponent,
