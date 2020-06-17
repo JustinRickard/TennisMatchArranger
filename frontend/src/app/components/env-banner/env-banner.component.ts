@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class EnvBannerComponent implements OnInit {
   
-  env: string = environment.env;
+  text: string = environment.envBanner;
   constructor() { }
 
   ngOnInit() {
