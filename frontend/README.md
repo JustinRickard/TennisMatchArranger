@@ -30,19 +30,19 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ### Building
 
-Build dev: `docker build --build-arg configuration=dev -t tennis-arranger-dev:<tag> .`
+Build dev: `docker build --build-arg configuration=dev -t tennis-arranger-frontend-dev:<tag> .`
 
-E.g: `docker build --build-arg configuration=dev -t tennis-arranger-dev:latest .`
+E.g: `docker build --build-arg configuration=dev -t tennis-arranger-frontend-dev:latest .`
 
-Build production: `docker build --build-arg configuration=production -t tennis-arranger-prod:<tag> .`
+Build production: `docker build --build-arg configuration=production -t tennis-arranger-frontend-prod:<tag> .`
 
-E.g: `docker build --build-arg configuration=production -t tennis-arranger-prod:0.0.1 .`
+E.g: `docker build --build-arg configuration=production -t tennis-arranger-frontend-prod:0.0.1 .`
 
 ### Running
 
-Run docker image: `docker run -p <port>:80 tennis-arranger-<env>:<tag>`
+Run docker image: `docker run -p <port>:80 tennis-arranger-frontend-<env>:<tag>`
 
-E.g: `docker run -p 8080:80 tennis-arranger-dev:latest`
+E.g: `docker run -p 8080:80 tennis-arranger-frontend-dev:latest`
 
 ### Publishing to GitHub
 

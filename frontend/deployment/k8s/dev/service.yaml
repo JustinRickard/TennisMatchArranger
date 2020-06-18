@@ -4,7 +4,7 @@ metadata:
   labels:
     env: dev
     app: tennis-arranger-frontend
-  name: tennis-arranger-front-end-dev
+  name: tennis-arranger-frontend-dev
 spec:
   type: ClusterIP
   ports:

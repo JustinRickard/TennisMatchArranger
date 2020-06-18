@@ -11,7 +11,7 @@ spec:
         app: tennis-arranger-frontend
     spec:
       containers:
-        - name: tennis-arranger-fronend-dev
+        - name: tennis-arranger-frontend-dev
           image: docker.pkg.github.com/justinrickard/tennismatcharranger/tennis-arranger-frontend-dev:latest
           imagePullPolicy: Always
           ports:
