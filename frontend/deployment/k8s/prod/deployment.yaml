@@ -1,0 +1,18 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: tennis-arranger-frontend-prod
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        env: prod
+        app: tennis-arranger-frontend
+    spec:
+      containers:
+        - name: tennis-arranger-fronend-prod
+          image: <url for image>
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 80

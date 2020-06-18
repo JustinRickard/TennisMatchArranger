@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    env: dev
+    app: tennis-arranger-frontend
+  name: tennis-arranger-front-end-dev
+spec:
+  type: ClusterIP
+  ports:
+  - name: service-port-name
+    port: 80
+    protocol: TCP
+  selector:
+    deployment-label-key: deployment-label-value
