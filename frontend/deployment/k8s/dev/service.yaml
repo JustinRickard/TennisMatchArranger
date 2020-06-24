@@ -12,4 +12,6 @@ spec:
     port: 80
     protocol: TCP
   selector:
-    deployment-label-key: deployment-label-value
+    matchLabels:
+      env: dev
+      app: tennis-arranger-frontend
