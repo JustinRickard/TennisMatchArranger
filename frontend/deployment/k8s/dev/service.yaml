@@ -6,12 +6,11 @@ metadata:
     app: tennis-arranger-frontend
   name: tennis-arranger-frontend-dev
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
-  - name: service-port-name
+  - name: http
     port: 80
     protocol: TCP
   selector:
-    matchLabels:
-      env: dev
-      app: tennis-arranger-frontend
+    env: dev
+    app: tennis-arranger-frontend
