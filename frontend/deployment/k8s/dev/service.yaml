@@ -10,7 +10,5 @@ spec:
   ports:
   - name: http
     port: 80
-    protocol: TCP
   selector:
-    env: dev
     app: tennis-arranger-frontend
