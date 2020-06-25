@@ -44,15 +44,13 @@ Run docker image: `docker run -p <port>:80 tennis-arranger-frontend-<env>:<tag>`
 
 E.g: `docker run -p 8080:80 tennis-arranger-frontend-dev:latest`
 
-### Publishing to GitHub
+### Publishing to Docker Hub
 
-Create an Access Token in GitHub
-
-Log in to GitHub (windows GitBash): `winpty docker login https://docker.pkg.github.com -u <username> -p <access token>`
+Log in to Docker Hub: `winpty docker login -u <username> -p <password>`
 
 Tag an image previously built: `docker tag <image ID> <image URL>`
 
-E.g: `docker tag e67469bb74b8  docker.pkg.github.com/justinrickard/tennismatcharranger/tennis-arranger-frontend-dev:latest`
+E.g: `docker tag e67469bb74b8  justinrickard/tennis-arranger-frontend-dev:latest`
 
 Push: `docker push <image URL>`
-E.g:`docker push docker.pkg.github.com/justinrickard/tennismatcharranger/tennis-arranger-frontend-dev:latest`
+E.g:`docker push justinrickard/tennis-arranger-frontend-dev:latest`

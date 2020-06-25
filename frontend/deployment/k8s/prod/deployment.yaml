@@ -11,8 +11,10 @@ spec:
         app: tennis-arranger-frontend
     spec:
       containers:
-        - name: tennis-arranger-fronend-prod
-          image: <url for image>
+        - name: tennis-arranger-frontend-prod
+          image: docker.io/justinrickard/tennis-arranger-frontend-prod:0.0.1
           imagePullPolicy: Always
           ports:
           - containerPort: 80
+      imagePullSecrets:
+        - name: dockerhub-docker-registry
